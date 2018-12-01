@@ -13,3 +13,9 @@ implementations, or coverage for additional languages.
 To generate boilerplate for the next puzzle, run `make next` in the language directory of your
 choosing. Edit the source to implement a solution, add unit tests and run `make test` to validate.
 Rise and repeat!
+
+## Requirements
+
+* GNU make
+* docker
+* docker-compose
