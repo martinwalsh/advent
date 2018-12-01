@@ -2,7 +2,7 @@ require "spec"
 require "../src/dayNN.cr"
 
 describe "part1" do
-  it "returns" do
+  it "checks part1" do
     DayNN.part1.should be_nil
   end
 end

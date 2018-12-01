@@ -1,7 +1,7 @@
 include ../.makefiles/ludicrous.mk
 include ../.makefiles/docker-compose.mk
 
-export OPTS ?=
+export OPTS ?= -v
 
 #> run unit tests
 #>   > make test
