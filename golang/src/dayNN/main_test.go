@@ -1,4 +1,4 @@
-package main
+package dayNN
 
 import (
 	"bufio"
@@ -32,7 +32,7 @@ func TestDayNNPart1(t *testing.T) {
 
 	g.Describe("check part 1", func() {
 		g.It("is true", func() {
-			Expect(dayNN_part1()).To(BeTrue())
+			Expect(part1()).To(BeTrue())
 		})
 	})
 }
@@ -44,7 +44,7 @@ func TestDayNNPart2(t *testing.T) {
 
 	g.Describe("check part 2", func() {
 		g.It("is true", func() {
-			Expect(dayNN_part2()).To(BeTrue())
+			Expect(part2()).To(BeTrue())
 		})
 	})
 }

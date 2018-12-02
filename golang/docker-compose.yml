@@ -4,4 +4,4 @@ services:
     build: .
     volumes:
       - ./src:/go/src/adventofcode
-    command: go test adventofcode ${OPTS}
+    command: go test adventofcode... ${OPTS}
