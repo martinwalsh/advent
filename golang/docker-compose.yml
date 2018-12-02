@@ -3,5 +3,6 @@ services:
   test:
     build: .
     volumes:
-      - ./src:/go/src/adventofcode
+      - ./src:/go/src/adventofcode:ro
+      - ../data:/data:ro
     command: go test adventofcode... ${OPTS}

@@ -17,6 +17,5 @@ shell: | build
 next:
 	@../.makefiles/next.sh 'src/dayNN.py'
 	@../.makefiles/next.sh 'tests/test_dayNN.py' dayNN
-	@../.makefiles/next.sh 'tests/input/dayNN.txt'
 
 .PHONY: test shell next

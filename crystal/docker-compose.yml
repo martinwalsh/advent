@@ -4,5 +4,6 @@ services:
     image: crystallang/crystal:0.27.0
     working_dir: /app
     volumes:
-      - .:/app
+      - .:/app:ro
+      - ../data:/data:ro
     command: crystal spec ${OPTS}

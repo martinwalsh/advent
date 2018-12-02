@@ -34,6 +34,11 @@ func TestDayNNPart1(t *testing.T) {
 		g.It("is true", func() {
 			Expect(part1()).To(BeTrue())
 		})
+
+		g.It("can read a data file", func() {
+			var expected []string
+			Expect(load_data("/data/dayNN.txt")).To(Equal(expected))
+		})
 	})
 }
 

@@ -13,7 +13,6 @@ test: | build
 #> start the next puzzle
 next:
 	@../.makefiles/next.sh 'src/dayNN' dayNN DayNN
-	@../.makefiles/next.sh 'src/input/dayNN.txt'
 
 #> go fmt the source
 format:

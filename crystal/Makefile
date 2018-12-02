@@ -14,6 +14,5 @@ test: | build
 next:
 	@../.makefiles/next.sh 'src/dayNN.cr' DayNN
 	@../.makefiles/next.sh 'spec/dayNN_spec.cr' dayNN DayNN
-	@../.makefiles/next.sh 'spec/input/dayNN.txt'
 
 .PHONY: test next
