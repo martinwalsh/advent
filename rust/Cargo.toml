@@ -1,0 +1,5 @@
+[package]
+name = "adventofcode"
+version = "2018.12.25"
+
+[dependencies]
