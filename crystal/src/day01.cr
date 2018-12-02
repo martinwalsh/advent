@@ -3,19 +3,11 @@ module Day01
 
   def calibrate(seq, freq=0, &block)
     seq.each do |item|
-      operator, value = item.chars.first, item[1..-1].to_i
-
-      # I think I'd like to do something like freq.send(operator, value)
-      # but Crystal lacks Ruby's reflection (stuff like eval and send).
-
-      if operator == '+'
-        freq += value
-      elsif operator == '-'
-        freq -= value
-      else
+      begin
+        freq += item.to_i
+      rescue
         raise Exception.new("Invalid input item: #{item}")
       end
-
       yield freq
     end
   end
