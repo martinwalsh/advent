@@ -1,0 +1,28 @@
+
+plugins {
+    id 'groovy'
+    id 'application'
+    // https://stackoverflow.com/a/46533151
+    id 'com.adarshr.test-logger' version '1.6.0'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation 'org.codehaus.groovy:groovy-all:2.5.4'
+    testImplementation 'org.spockframework:spock-core:1.2-groovy-2.5'
+}
+
+test {
+  testLogging {
+    outputs.upToDateWhen {false}
+  }
+}
+
+if (project.hasProperty('skipTasks')) {
+  project.getProperty('skipTasks').split(',').each { t ->
+    gradle.startParameter.excludedTaskNames += t
+  }
+}
