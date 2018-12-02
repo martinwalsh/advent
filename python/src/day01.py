@@ -1,21 +1,14 @@
 #!/usr/bin/env python
 
 
-def parse(item):
-    return item[0], int(item[1:])
-
-
 def calibrate(seq, freq=0):
     for item in seq:
-        operator, value = parse(item)
-
-        if operator == '+':
-            freq += value
-        elif operator == '-':
-            freq -= value
-        else:
+        try:
+            freq += int(item)
+        except ValueError:
             raise ValueError('Invalid input item: {}'.format(item))
-        yield freq
+        else:
+            yield freq
 
 
 def part1(seq):
