@@ -1,0 +1,9 @@
+version: '3'
+services:
+  test:
+    image: gradle:5.0.0-jre8-alpine
+    working_dir: /home/gradle/aoc
+    volumes:
+      - .:/home/gradle/aoc
+      - ../data:/data:ro
+    command: gradle test ${OPTS}
