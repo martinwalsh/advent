@@ -14,5 +14,10 @@ test: | build
 next:
 	@../.makefiles/next.sh 'src/dayNN.go' dayNN
 	@../.makefiles/next.sh 'src/dayNN_test.go' dayNN DayNN
+	@../.makefiles/next.sh 'src/input/dayNN.txt'
 
-.PHONY: test
+#> go fmt the source
+format:
+	go fmt src/*.go
+
+.PHONY: test next format

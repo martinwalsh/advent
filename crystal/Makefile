@@ -16,4 +16,4 @@ next:
 	@../.makefiles/next.sh 'spec/dayNN_spec.cr' dayNN DayNN
 	@../.makefiles/next.sh 'spec/input/dayNN.txt'
 
-.PHONY: test
+.PHONY: test next
