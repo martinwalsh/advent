@@ -1,4 +1,4 @@
-package main
+package day01
 
 import (
 	"log"
@@ -45,7 +45,7 @@ func calibrate(seq []string, freq int) chan int {
 	return c
 }
 
-func day01_part1(seq []string) int {
+func part1(seq []string) int {
 	// FIXME: hrm, there must be a better way to grab the last element
 	var result int
 	for freq := range calibrate(seq, 0) {
@@ -54,7 +54,7 @@ func day01_part1(seq []string) int {
 	return result
 }
 
-func day01_part2(seq []string) int {
+func part2(seq []string) int {
 	seen := NewIntSet()
 	seen.Add(0)
 
