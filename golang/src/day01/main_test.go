@@ -44,7 +44,7 @@ func TestDay01Part1(t *testing.T) {
 
 	g.Describe("real input for part 1", func() {
 		g.It("should correctly adjust frequencies", func() {
-			Expect(part1(load_data("../input/day01.txt"))).To(Equal(582))
+			Expect(part1(load_data("/data/day01-marty.txt"))).To(Equal(582))
 		})
 	})
 }
@@ -65,7 +65,7 @@ func TestDay01Part2(t *testing.T) {
 
 	g.Describe("real input for part 2", func() {
 		g.It("should correctly calibrate", func() {
-			Expect(part2(load_data("../input/day01.txt"))).To(Equal(488))
+			Expect(part2(load_data("/data/day01-marty.txt"))).To(Equal(488))
 		})
 	})
 }

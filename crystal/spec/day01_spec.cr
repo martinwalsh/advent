@@ -21,13 +21,13 @@ describe "Day01" do
 
   context "with real input for part1" do
     it "should correctly adjust frequencies" do
-      Day01.part1(File.read("spec/input/day01.txt").lines).should eq(582)
+      Day01.part1(File.read("/data/day01-marty.txt").lines).should eq(582)
     end
   end
 
   context "with real input for part2" do
     it "should correctly calibrate" do
-      Day01.part2(File.read("spec/input/day01.txt").lines).should eq(488)
+      Day01.part2(File.read("/data/day01-marty.txt").lines).should eq(488)
     end
   end
 end
