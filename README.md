@@ -5,8 +5,7 @@ In each directory you'll find (most of) what you need to start a new puzzle for 
 language. You are encouraged to solve each puzzle by writing unit tests.
 
 Implemented in haste, you will likely find several errors or omissions here. But, contributions are
-greatly appreciated -- whether they be corrections or improvements to existing languages
-implementations, or coverage for additional languages.
+most welcome and greatly appreciated.
 
 ## Quick Start
 
