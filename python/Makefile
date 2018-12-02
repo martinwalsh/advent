@@ -19,4 +19,4 @@ next:
 	@../.makefiles/next.sh 'tests/test_dayNN.py' dayNN
 	@../.makefiles/next.sh 'tests/input/dayNN.txt'
 
-.PHONY: test shell
+.PHONY: test shell next
