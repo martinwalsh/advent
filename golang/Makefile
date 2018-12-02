@@ -15,4 +15,8 @@ next:
 	@../.makefiles/next.sh 'src/dayNN.go' dayNN
 	@../.makefiles/next.sh 'src/dayNN_test.go' dayNN DayNN
 
+#> go fmt the source
+format:
+	go fmt src/*.go
+
 .PHONY: test
