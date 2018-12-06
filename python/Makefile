@@ -18,4 +18,7 @@ next:
 	@../.makefiles/next.sh 'src/dayNN.py'
 	@../.makefiles/next.sh 'tests/test_dayNN.py' dayNN
 
-.PHONY: test shell next
+clean::
+	rm -rf prof/
+
+.PHONY: test shell next clean
