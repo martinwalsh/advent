@@ -28,10 +28,10 @@ def test_example_is_guard_10_on_the_24th_minute():
 
 
 def test_solution_part1(load_input):
-    with load_input('/data/day04-mw.txt') as data:
+    with load_input('/data/day04-2018.txt') as data:
         assert part1(data.splitlines()) == 11367
 
 
 def test_solution_part2(load_input):
-    with load_input('/data/day04-mw.txt') as data:
+    with load_input('/data/day04-2018.txt') as data:
         assert part2(data.splitlines()) == 36896

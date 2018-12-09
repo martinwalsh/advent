@@ -33,7 +33,7 @@ def test_examples_checksum_function():
 
 
 def test_solution_part1(load_input):
-    with load_input('/data/day02-marty.txt') as data:
+    with load_input('/data/day02-2018.txt') as data:
         assert part1(data.splitlines()) == 8296
 
 
@@ -42,5 +42,5 @@ def test_examples_common_characters():
 
 
 def test_solution_part2(load_input):
-    with load_input('/data/day02-marty.txt') as data:
+    with load_input('/data/day02-2018.txt') as data:
         assert part2(data.splitlines()) == 'pazvmqbftrbeosiecxlghkwud'
