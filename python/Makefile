@@ -11,7 +11,7 @@ test: | build
 	docker-compose run --rm test
 
 shell: | build
-	docker-compose run --rm test ipython
+	docker-compose run --rm test sh -c "cd /app/src; ipython"
 
 #> start the next puzzle
 next:
