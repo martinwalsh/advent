@@ -13,6 +13,9 @@ test: | build
 shell: | build
 	docker-compose run --rm test sh -c "cd /app/src; ipython"
 
+edit: | _var_DAY
+	vim -O src/day$(DAY).py tests/test_day$(DAY).py
+
 #> start the next puzzle
 next:
 	@../.makefiles/next.sh 'src/dayNN.py'
@@ -21,4 +24,4 @@ next:
 clean::
 	rm -rf prof/
 
-.PHONY: test shell next clean
+.PHONY: test shell next clean shell open

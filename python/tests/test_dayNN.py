@@ -6,10 +6,10 @@ def test_examples():
 
 
 def test_solution_part1(load_input):
-    with load_input('/data/dayNN.txt') as data:
-        assert part1(data) is NotImplemented
+    with load_input('/data/dayNN-2018.txt') as data:
+        assert part1(data.splitlines()) is NotImplemented
 
 
 def test_solution_part2(load_input):
-    with load_input('/data/dayNN.txt') as data:
-        assert part2(data) is NotImplemented
+    with load_input('/data/dayNN-2018.txt') as data:
+        assert part2(data.splitlines()) is NotImplemented
