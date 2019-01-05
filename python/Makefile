@@ -1,7 +1,11 @@
 include ../.makefiles/ludicrous.mk
 include ../.makefiles/docker-compose.mk
 
-export OPTS ?= -vv
+ifdef DAY
+export OPTS ?= -vx tests/test_day$(DAY).py
+else
+export OPTS ?= -v
+endif
 
 #> run unit tests
 #>   > make test
