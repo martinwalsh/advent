@@ -1,0 +1,10 @@
+version: '3'
+services:
+  test:
+    build: .
+    environment:
+      MIX_ENV: dev
+    volumes:
+      - .:/app:ro
+      - ../data:/data:ro
+    command: mix test

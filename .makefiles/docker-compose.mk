@@ -1,3 +1,4 @@
+ADDITIONAL_BUILD_REQS ?=
 DOCKER_COMPOSE_PULL ?= yes
 DOCKER_COMPOSE_DAEMON ?= yes
 DOCKER_COMPOSE_FILE ?= docker-compose.yml
@@ -6,7 +7,7 @@ DOCKER_COMPOSE_UP_FLAGS += $(if $(filter yes,$(DOCKER_COMPOSE_DAEMON)),-d)
 DOCKER_COMPOSE_BUILD_FLAGS += $(if $(filter yes,$(DOCKER_COMPOSE_PULL)),--pull)
 DOCKER_COMPOSE_CLEAN_FLAGS ?= --rmi all --volumes --remove-orphans
 
-.docker-compose-build-complete:
+.docker-compose-build-complete: Dockerfile $(DOCKER_COMPOSE_FILE) $(ADDITIONAL_BUILD_REQS)
 	@[ -f .gitignore -a -z "$$(grep '$@' .gitignore 2> /dev/null)" ] && \
 		( $(call _warn,WARNING: $@ not found in .gitignore) ) || true
 	$(call log,building from $(DOCKER_COMPOSE_FILE))

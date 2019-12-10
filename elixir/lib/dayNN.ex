@@ -1,0 +1,2 @@
+defmodule DayNN do
+end

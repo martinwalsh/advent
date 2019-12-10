@@ -1,0 +1,5 @@
+# ignore all files by default
+**
+
+# allowed files
+!mix.exs
