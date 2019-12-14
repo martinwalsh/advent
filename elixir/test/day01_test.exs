@@ -1,5 +1,5 @@
 defmodule Day01Test do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
   import Advent.Day01
 
   test "examples_part1" do
