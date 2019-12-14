@@ -1,4 +1,6 @@
 defmodule Day01 do
+  use Data.Numerical
+
   def part1() do
     Enum.map(data(), &calculate_fuel/1) |> sum()
   end
@@ -19,16 +21,5 @@ defmodule Day01 do
       n ->
         n + calculate_fuel_with_fuel_cost(n)
     end
-  end
-
-  defp sum(numbers) do
-    Enum.reduce(numbers, 0, fn n, acc -> n + acc end)
-  end
-
-  defp data do
-    File.read!("/data/day01-2019.txt")
-    |> String.split("\n")
-    |> Enum.drop(-1)
-    |> Enum.map(&String.to_integer/1)
   end
 end
