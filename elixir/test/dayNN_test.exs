@@ -1,6 +1,6 @@
 defmodule DayNNTest do
   use ExUnit.Case
-  import DayNN
+  import Advent.DayNN
 
   test "part1" do
     assert true

@@ -16,7 +16,7 @@ shell: | build
 
 #> start the next puzzle
 next:
-	@../.makefiles/next.sh 'lib/dayNN.ex' dayNN DayNN
+	@../.makefiles/next.sh 'lib/advent/dayNN.ex' dayNN DayNN
 	@../.makefiles/next.sh 'test/dayNN_test.exs' dayNN DayNN
 
 clean::

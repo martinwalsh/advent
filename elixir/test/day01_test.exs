@@ -1,6 +1,6 @@
 defmodule Day01Test do
   use ExUnit.Case
-  import Day01
+  import Advent.Day01
 
   test "examples_part1" do
     assert calculate_fuel(12) == 2

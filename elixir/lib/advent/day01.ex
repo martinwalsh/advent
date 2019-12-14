@@ -1,5 +1,5 @@
-defmodule Day01 do
-  use Data.Numerical
+defmodule Advent.Day01 do
+  use Advent.Input.IntegerData, delimiter: "\n"
 
   def part1() do
     Enum.map(data(), &calculate_fuel/1) |> sum()

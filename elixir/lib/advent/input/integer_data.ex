@@ -1,13 +1,15 @@
-defmodule Data.Numerical do
-  defmacro __using__(_) do
-    quote do
+defmodule Advent.Input.IntegerData do
+  defmacro __using__(opts) do
+    quote bind_quoted: [opts: opts] do
+      @delimiter Keyword.fetch!(opts, :delimiter)
+
       defp path do
         "/data/" <> (Module.split(__MODULE__) |> List.last() |> String.downcase()) <> "-2019.txt"
       end
 
       defp data do
         File.read!(path())
-        |> String.split("\n")
+        |> String.split(@delimiter)
         |> Enum.drop(-1)
         |> Enum.map(&String.to_integer/1)
       end
