@@ -1,11 +1,9 @@
 defmodule Advent.Input.IntegerData do
   defmacro __using__(opts) do
     quote bind_quoted: [opts: opts] do
-      @delimiter Keyword.fetch!(opts, :delimiter)
+      use Advent.Input.BaseData
 
-      defp path do
-        "/data/" <> (Module.split(__MODULE__) |> List.last() |> String.downcase()) <> "-2019.txt"
-      end
+      @delimiter Keyword.fetch!(opts, :delimiter)
 
       defp data do
         File.read!(path())

@@ -7,4 +7,4 @@ services:
     volumes:
       - .:/app:ro
       - ../data:/data:ro
-    command: mix test
+    command: mix test ${OPTS-}

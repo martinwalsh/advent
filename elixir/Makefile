@@ -2,11 +2,11 @@ include ../.makefiles/ludicrous.mk
 ADDITIONAL_BUILD_REQS := mix.exs
 include ../.makefiles/docker-compose.mk
 
-export OPTS ?= -vv
+export OPTS ?=
 
 #> run unit tests
 #>   > make test
-#>   > make test OPTS="-vvx -k tests/test_day01.py"
+#>   > make test OPTS="--trace"
 test: | build
 	$(call log,running tests ($(notdir $(CURDIR))))
 	docker-compose run --rm test
