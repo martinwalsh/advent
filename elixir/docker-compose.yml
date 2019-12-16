@@ -4,7 +4,9 @@ services:
     build: .
     environment:
       MIX_ENV: dev
+      ERL_AFLAGS: -kernel shell_history enabled  shell_history_path '"/var/cache"'
     volumes:
+      - ./.cache:/var/cache
       - .:/app:ro
       - ../data:/data:ro
     command: mix test ${OPTS-}
