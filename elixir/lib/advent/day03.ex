@@ -6,18 +6,37 @@ defmodule Advent.Day03 do
 
   def part1() do
     data()
-    |> closest_intersection()
+    |> closest_by(:manhattan)
     |> manhattan_distance()
   end
 
-  def closest_intersection([wire1, wire2]) do
-    MapSet.intersection(wire1, wire2)
-    |> Enum.to_list()
-    |> Enum.min_by(fn {x, y} -> manhattan_distance({x, y}) end)
+  def part2() do
+    [wire1, wire2] = data()
+    sum_of_steps(closest_by([wire1, wire2], :sum_of_steps), wire1, wire2)
+  end
+
+  def closest_by([wire1, wire2], method) do
+    intersections = MapSet.new(wire1) |> MapSet.intersection(MapSet.new(wire2))
+
+    case method do
+      :manhattan ->
+        intersections
+        |> Enum.min_by(fn {x, y} -> manhattan_distance({x, y}) end)
+
+      :sum_of_steps ->
+        intersections
+        |> Enum.min_by(fn {x, y} -> sum_of_steps({x, y}, wire1, wire2) end)
+    end
   end
 
   def manhattan_distance({x, y}) do
     Kernel.abs(0 - x) + Kernel.abs(0 - y)
+  end
+
+  def sum_of_steps(point, wire1, wire2) do
+    [wire1, wire2]
+    |> Enum.map(fn wire -> Enum.find_index(wire, &(&1 == point)) + 1 end)
+    |> Enum.sum()
   end
 
   @impl DirectionalData

@@ -13,7 +13,7 @@ defmodule Advent.Input.DirectionalData do
         File.read!(path())
         |> String.split("\n")
         |> Enum.drop(-1)
-        |> Enum.map(fn line -> collect(line) |> MapSet.new() end)
+        |> Enum.map(&collect/1)
       end
     end
   end
