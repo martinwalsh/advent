@@ -4,6 +4,7 @@ services:
     build: .
     environment:
       PYTHONDONTWRITEBYTECODE: 1
+      YEAR: ${YEAR}
     volumes:
       - .:/app:ro
       - ./prof:/app/prof

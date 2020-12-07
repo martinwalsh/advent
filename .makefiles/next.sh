@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+YEAR="${YEAR:-2020}"
+
 SOURCE="$1"
 if [ -z "$SOURCE" ]; then
   echo "Usage: $0 path/to/dayNN.ext [content pattern]"
@@ -29,6 +31,7 @@ while [ -n "$1" ]; do
   REPLACE="$(printf -- "${1//NN/%02d}" "$DAY")"
   for path in $DEST; do
       sed -i '' "s/$1/${REPLACE}/g" "$path"
+      sed -i '' "s/YYYY/${YEAR}/g" "$path"
   done
   shift
 done

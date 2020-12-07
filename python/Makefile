@@ -2,6 +2,7 @@ include ../.makefiles/ludicrous.mk
 include ../.makefiles/docker-compose.mk
 
 export OPTS ?= -vv
+export YEAR := 2020
 
 #> run unit tests
 #>   > make test
@@ -20,5 +21,6 @@ next:
 
 clean::
 	rm -rf prof/
+	git clean -Xfd
 
 .PHONY: test shell next clean

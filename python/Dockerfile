@@ -1,8 +1,8 @@
-FROM python:3.7.1-alpine3.8
+FROM python:3.9-alpine3.12
 
-ENV PIPENV_VERSION 2018.10.13
-RUN pip install pipenv==${PIPENV_VERSION}
+RUN pip install --upgrade pip setuptools wheel && \
+      pip install pipenv
 WORKDIR /app
 
 COPY Pipfile* /app/
-RUN pipenv install --dev  --system --deploy
+RUN pipenv install --dev --system --deploy
