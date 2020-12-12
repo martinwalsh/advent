@@ -1,2 +1,3 @@
 /prof/
 .docker-compose-build-complete
+__pycache__
