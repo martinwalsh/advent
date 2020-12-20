@@ -1,7 +1,7 @@
 include ../.makefiles/ludicrous.mk
 include ../.makefiles/docker-compose.mk
 
-export OPTS ?= -vv
+export OPTS ?= -vv -m "not slow"
 export YEAR := 2020
 
 #> run unit tests
