@@ -1,4 +1,4 @@
-FROM python:3.9-alpine3.12
+FROM python:3.9.1-slim-buster
 
 RUN pip install --upgrade pip setuptools wheel && \
       pip install pipenv
