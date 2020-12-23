@@ -62,4 +62,4 @@ def test_solution_part1(load_input):
 
 def test_solution_part2(load_input):
     with load_input('/data/day10-2020.txt') as data:
-        assert part2(data) is NotImplemented
+        assert part2(data) == 3454189699072
