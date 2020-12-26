@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
 
-def part1(arg):
+def part1(text):
     return NotImplemented
 
 
-def part2(arg):
+def part2(text):
     return NotImplemented

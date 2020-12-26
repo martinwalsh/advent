@@ -9,4 +9,5 @@ services:
       - .:/app:ro
       - ./prof:/app/prof
       - ../data:/data:ro
+      - './build/profile/:/root/.ipython/profile_default/'
     command: pytest -p no:cacheprovider ${OPTS}
