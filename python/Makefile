@@ -12,7 +12,7 @@ test: | build
 	docker-compose run --rm test
 
 shell: | build
-	docker-compose run --rm test ipython
+	docker-compose run -e PYTHONPATH='src' -e DAY='$(DAY)' --rm test ipython -i bin/interactive.py
 
 #> start the next puzzle
 next:
