@@ -4,12 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-
-[dev-packages]
 pytest = "*"
-pytest-pythonpath = "*"
 ipython = "*"
 pytest-profiling = "*"
+
+[dev-packages]
 
 [requires]
 python_version = "3.11"

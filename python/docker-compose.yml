@@ -3,6 +3,7 @@ services:
   test:
     build: .
     environment:
+      PYTHONPATH: ./src
       PYTHONDONTWRITEBYTECODE: 1
     volumes:
       - .:/app:ro
