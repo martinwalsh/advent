@@ -1,9 +1,9 @@
 (ns dayNN)
 
 (defn part1
-  ([arg] nil)
+  ([data] nil)
 )
 
 (defn part2
-  ([arg] nil)
+  ([data] nil)
 )
