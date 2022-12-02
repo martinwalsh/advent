@@ -1,9 +1,14 @@
 version: '3'
+
+volumes:
+  gradle-cache:
+
 services:
   test:
-    image: gradle:5.0.0-jre8-alpine
+    image: gradle:jdk17-alpine
     working_dir: /home/gradle/aoc
     volumes:
       - .:/home/gradle/aoc
       - ../data:/data:ro
+      - gradle-cache:/home/gradle/.gradle
     command: gradle test ${OPTS}
