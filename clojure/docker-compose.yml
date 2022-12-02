@@ -1,4 +1,8 @@
 version: '3'
+
+volumes:
+  ? m2-cache
+
 services:
   test:
     image: clojure:temurin-17-lein-alpine
@@ -6,4 +10,5 @@ services:
     volumes:
       - .:/app
       - ../data:/data:ro
+      - m2-cache:/root/.m2
     command: lein eftest ${OPTS}
