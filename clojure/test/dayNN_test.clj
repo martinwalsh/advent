@@ -12,7 +12,7 @@
 (def EXAMPLE1 (clojure.string/trim "
 "))
 
-(deftest dayNN-test-examples
+(deftest dayNN-examples-test
   (is (and
     (= nil (dayNN/part1 nil))
     (= nil (dayNN/part2 nil)))))

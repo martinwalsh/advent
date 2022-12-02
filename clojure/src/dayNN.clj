@@ -1,3 +1,5 @@
+(set! *warn-on-reflection* true)
+
 (ns dayNN)
 
 (defn part1
