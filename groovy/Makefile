@@ -19,4 +19,7 @@ next:
 clean::
 	rm -rf .gradle build .java
 
-.PHONY: test next clean
+Dockerfile:  # Required by the shared docker-compose targets (no-op).
+	@:
+
+.PHONY: test next clean Dockerfile

@@ -2,8 +2,18 @@ package adventofcode
 
 import spock.lang.Specification
 
-class DayNNTest extends Specification {
+class DayNNTestCls extends Specification {
   def dayNN = new DayNN()
+  String data = new File('/data/dayNN.txt').text
+
+  String EXAMPLE = """\
+  """
+
+  def "check examples"() {
+    expect:
+      dayNN.part1(EXAMPLE) != false
+      dayNN.part2(EXAMPLE) != false
+  }
 
   def "check part 1"() {
     expect: dayNN.part1() != false
@@ -11,12 +21,5 @@ class DayNNTest extends Specification {
 
   def "check part 2"() {
     expect: dayNN.part2() != false
-  }
-
-  def "can read data file"() {
-    setup:
-    String data = new File('/data/dayNN.txt').text
-
-    expect: data == ''
   }
 }
