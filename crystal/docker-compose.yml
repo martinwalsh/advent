@@ -1,7 +1,7 @@
 version: '3'
 services:
   test:
-    image: crystallang/crystal:0.27.0
+    image: crystallang/crystal:1.6.2-alpine
     working_dir: /app
     volumes:
       - .:/app:ro
