@@ -15,4 +15,7 @@ next:
 	@../.makefiles/next.sh 'src/dayNN.cr' DayNN
 	@../.makefiles/next.sh 'spec/dayNN_spec.cr' dayNN DayNN
 
+Dockerfile:  # Required by the shared docker-compose targets (no-op).
+	@:
+
 .PHONY: test next
