@@ -21,4 +21,7 @@ next:
 clean::
 	rm -rf target/ .lein-failures .lein-repl-history
 
-.PHONY: test shell next
+Dockerfile: # Required by the shared docker-compose targets (no-op).
+	@:
+
+.PHONY: test shell next Dockerfile
