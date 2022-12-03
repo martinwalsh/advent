@@ -24,6 +24,7 @@ def part1(data):
             score += 3
     return score
 
+
 def part2(data):
     score = 0
     for line in data.splitlines():
@@ -38,5 +39,3 @@ def part2(data):
         elif "loss" == results[result]:
             score += play_scores[winners[player1[p1]]]
     return score
-
-

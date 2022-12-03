@@ -24,10 +24,10 @@ def test_examples():
 
 
 def test_solution_part1(load_input):
-    with load_input('/data/day01.txt') as data:
+    with load_input("/data/day01.txt") as data:
         assert part1(data) == 68775
 
 
 def test_solution_part2(load_input):
-    with load_input('/data/day01.txt') as data:
-        assert part2(data)  == 202585
+    with load_input("/data/day01.txt") as data:
+        assert part2(data) == 202585
