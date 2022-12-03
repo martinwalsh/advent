@@ -1,8 +1,14 @@
 version: '3'
+
+volumes:
+  ? cache
+
 services:
   test:
     build: .
     volumes:
+      - cache:/go/pkg/mod
       - ./src:/go/src/adventofcode:ro
       - ../data:/data:ro
-    command: go test adventofcode... ${OPTS}
+    command: go test ./... ${OPTS}
+    working_dir: /go/src/adventofcode
