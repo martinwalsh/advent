@@ -2,7 +2,7 @@ include ../.makefiles/ludicrous.mk
 ADDITIONAL_BUILD_REQS := mix.exs
 include ../.makefiles/docker-compose.mk
 
-export YEAR := 2020
+export YEAR := $(or $(shell date +%Y),2020)
 
 export OPTS ?=
 export DEBUG ?=

@@ -1,6 +1,7 @@
-FROM elixir:1.9.4
+FROM elixir:1.14.2-alpine
 
 ENV MIX_ENV dev
+
 WORKDIR /app
 
 COPY mix.exs /app/
