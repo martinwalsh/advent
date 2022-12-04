@@ -6,7 +6,6 @@ services:
       PYTHONPATH: ./src
       PYTHONDONTWRITEBYTECODE: 1
     volumes:
-      - .:/app:ro
-      - ./prof:/app/prof
+      - .:/app
       - ../data:/data:ro
     command: pytest -p no:cacheprovider ${OPTS}
