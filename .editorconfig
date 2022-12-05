@@ -32,3 +32,6 @@ indent_style = tab
 
 [Dockerfile]
 indent_size = 2
+
+[python/tests/test_day05.py]
+trim_trailing_whitespace = false
