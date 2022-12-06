@@ -1,0 +1,24 @@
+{
+    "description": "// Stolen from Exercism's typescript track //",
+    "compilerOptions": {
+        "lib": [
+            "ESNEXT",
+            "dom"
+        ],
+        "module": "ES2020",
+        "moduleResolution": "node",
+        "target": "ESNext",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "isolatedModules": true
+    },
+    "include": [
+        "src/*.ts",
+        "src/*.tsx"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

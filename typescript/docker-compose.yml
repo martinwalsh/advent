@@ -1,0 +1,10 @@
+version: '3'
+services:
+  test:
+    build: .
+    environment:
+      DEBUG: "eslint:cli-engine"
+    volumes:
+      - ./src:/app/src
+      - ../data:/data:ro
+    command: yarn test ${OPTS}
