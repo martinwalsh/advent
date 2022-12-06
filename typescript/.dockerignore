@@ -1,0 +1,9 @@
+**
+!Makefile
+!src/
+!.eslint*
+!.prettierrc.json
+!babel.config.cjs
+!jest.config.cjs
+!package.json
+!tsconfig.json
